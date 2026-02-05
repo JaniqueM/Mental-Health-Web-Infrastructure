@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://mgx-backend-cdn.metadl.com/generate/images/831622/2026-02-03/5d9aa4d8-3698-4adb-971a-d3ad6e4e84a4.png" type="image/png">
+    <title>SouLift - Mental Health & Wellness Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <h1>🌿 SouLift 💚</h1>
+            <p class="tagline">Your daily companion for mental wellness, self-care, and spiritual growth.</p>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="main">
+    <div class="container">
+        <!-- Daily Affirmation Section -->
+        <section class="affirmation-section">
+            <div class="affirmation-card">
+                <h2 class="affirmation-title">✨ Today's Affirmation</h2>
+                <p class="affirmation-text" id="affirmationText">Loading your daily affirmation...</p>
+                <button id="newAffirmationBtn" class="btn btn-affirmation">
+                    <span class="btn-icon">🔄</span>
+                    New Affirmation
+                </button>
+            </div>
+        </section>
+
+        <!-- Mood Tracker -->
+        <section class="mood-section">
+            <h2>How are you feeling today?</h2>
+            <div class="mood-selector">
+                <button class="mood-btn" data-mood="great" aria-label="Feeling great">
+                    <span class="mood-emoji">😊</span>
+                    <span class="mood-label">Great</span>
+                </button>
+                <button class="mood-btn" data-mood="good" aria-label="Feeling good">
+                    <span class="mood-emoji">🙂</span>
+                    <span class="mood-label">Good</span>
+                </button>
+                <button class="mood-btn" data-mood="okay" aria-label="Feeling okay">
+                    <span class="mood-emoji">😐</span>
+                    <span class="mood-label">Okay</span>
+                </button>
+                <button class="mood-btn" data-mood="low" aria-label="Feeling low">
+                    <span class="mood-emoji">😔</span>
+                    <span class="mood-label">Low</span>
+                </button>
+                <button class="mood-btn" data-mood="anxious" aria-label="Feeling anxious">
+                    <span class="mood-emoji">😰</span>
+                    <span class="mood-label">Anxious</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Wellness Goals Section -->
+        <section class="task-input-section">
+            <h2>🎯 My Wellness Goals</h2>
+            <p class="section-description">Set small, achievable goals for your mental health journey</p>
+            <form id="taskForm" class="task-form">
+                <div class="input-group">
+                    <input
+                            type="text"
+                            id="taskInput"
+                            class="task-input"
+                            placeholder="e.g., Meditate for 10 minutes, Take a walk, Call a friend..."
+                            aria-label="Wellness goal input"
+                            required
+                    >
+                    <button type="submit" class="btn btn-primary" aria-label="Add wellness goal">
+                        <span class="btn-icon">+</span>
+                        Add Goal
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Progress Statistics -->
+        <section class="task-stats">
+            <div class="stat-card">
+                <span class="stat-number" id="totalTasks">0</span>
+                <span class="stat-label">Total Goals</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="activeTasks">0</span>
+                <span class="stat-label">In Progress</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="completedTasks">0</span>
+                <span class="stat-label">Completed</span>
+            </div>
+        </section>
+
+        <!-- Goal Filter -->
+        <section class="task-filter">
+            <button class="filter-btn active" data-filter="all">All Goals</button>
+            <button class="filter-btn" data-filter="active">In Progress</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </section>
+
+        <!-- Wellness Goals List -->
+        <section class="task-list-section">
+            <div id="taskList" class="task-list">
+                <!-- Goals will be dynamically inserted here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <img src="https://mgx-backend-cdn.metadl.com/generate/images/831622/2026-02-03/fcf4172d-6e55-45a5-951a-9b74de59d37a.png" alt="No goals yet" class="empty-img">
+                <h3>Start your wellness journey!</h3>
+                <p>Add your first self-care goal above to begin tracking your mental health progress</p>
+            </div>
+        </section>
+
+        <!-- Mental Health Resources -->
+        <section class="resources-section">
+            <h2>🌟 Mental Health Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>Crisis Support</h3>
+                    <p>If you're in crisis, please reach out:</p>
+                    <p><strong>Mauritius Police Emergency</strong></p>
+                    <p>Call 999 or 112</p>
+                    <p><strong>Befrienders Mauritius</strong></p>
+                    <p>Call 800 93 93 (Toll-free)</p>
+                </div>
+                <div class="resource-card">
+                    <h3>Self-Care Tips</h3>
+                    <ul>
+                        <li>Practice deep breathing</li>
+                        <li>Stay hydrated</li>
+                        <li>Get adequate sleep</li>
+                        <li>Connect with loved ones</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>Mindfulness</h3>
+                    <p>Take a moment to:</p>
+                    <ul>
+                        <li>Notice 5 things you can see</li>
+                        <li>4 things you can touch</li>
+                        <li>3 things you can hear</li>
+                        <li>2 things you can smell</li>
+                        <li>1 thing you can taste</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 SouLift. Your mental health matters. 💚</p>
+        <p class="footer-info">Remember: This is a wellness tool, not a substitute for professional mental health care.</p>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script type="module" src="./index.js"></script>
+</body>
+
+</html>
