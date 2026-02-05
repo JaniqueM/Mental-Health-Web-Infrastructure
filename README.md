@@ -37,12 +37,6 @@ Option 1: Open Directly
 2. Install the “Live Server” extension.
 3. Right-click `index.html` and select “Open with Live Server”.
 
-# Option 3: Using Python
-```
-python -m http.server 8000
-```
-Then navigate to `http://localhost:8000` in your browser.
-
 # Deployment Process
 Hosting Platform: GitHub Pages
 GitHub Pages was selected as the hosting platform because:
@@ -60,7 +54,7 @@ GitHub Pages was selected as the hosting platform because:
 6. Access the live site via the public URL.
 
 #Live URL
-[https://yourusername.github.io/soulift/](https://yourusername.github.io/soulift/)
+https://janiquem.github.io/Mental-Health-Web-Infrastructure/
 
 #Web Infrastructure Overview
 How Users Access the Application:
